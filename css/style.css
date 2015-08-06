@@ -1,0 +1,99 @@
+
+/**** base styles ****/
+
+*       { margin:0; padding:0; }
+body    { overflow-y: scroll; }
+
+
+
+/**** typography ****/
+body,
+
+h1, h2, h3, .QAmt, #filtering-nav, 
+
+
+p   { padding-bottom: 17px; /* same as leading = linebreak */ }
+h3  { padding-bottom: 15px; /* same as leading = linebreak */ }
+a img, img  { padding-bottom:3px; padding-top:3px; }
+.everything     {  }
+
+
+/**** link styles ****/
+a           { text-decoration:none; focus:none; }
+a:hover     { text-decoration:none; focus:none; }
+a img, img  { border:none; focus:none; }
+a:focus, img:focus  { outline: none; }
+
+p a { text-decoration: underline; }
+p a:hover { color:#89724F; text-decoration: underline; }
+
+
+
+/**** colours ****/
+a       { color:#493E2C; }
+a:hover { color:#89724F; }
+
+body            { 
+
+    background:#F0EBE6; 
+    color:#493E2C; 
+    font-family: ‘Lato’, sans-serif;
+    font-weight: 300;     
+}
+
+
+.social {
+    margin: 5px 5px 0 0;
+}
+
+li{
+    list-style: none;
+}
+
+
+#filtering-nav li a:active,
+#filtering-nav li a.selected,
+#filtering-nav li a.selected.everything { color:#89724F; }
+
+
+**** filtering menu ****
+#filtering-nav              { margin: 0px 0px 29px 0px; }
+#filtering-nav li           { float:left; list-style:none; }
+#filtering-nav li a         { display:block; width:auto; }
+#filtering-nav li a:active  { text-decoration:none; }
+#filtering-nav li a.selected, #filtering-nav li a.selected.everything   { text-decoration:none; }
+
+
+/**** first menu col extra ****/
+#filtering-nav li.col3 { height: 91px; }
+#filtering-nav li.col3, #filtering-nav li.col2 { margin-right: 10px; }
+
+*****
+
+/**** content ****/
+.wall       { overflow:visible; margin-bottom:0px; }
+#content    { padding:20px 0px 25px 25px; /*display:none;*/ }
+.hidden     { display:none; }
+
+
+/**** masonry css ****/
+.box { margin:0px 0px 12px 0px; float:left; }
+
+.col1 { width:90px; }
+.col2 { width:270px; }
+.col3 { width:310px; }
+.col4 { width:420px; }
+.col5 { width:530px; }
+
+.col1 img { max-width:90px; }
+.col2 img { max-width:270px; }
+.col3 img { max-width:310px; }
+.col4 img { max-width:420px; }
+.col5 img { max-width:530px; }
+
+
+/**** Clearfixes ****/
+.wall:after, #filtering-nav:after { content:''; display:block; height:0; clear:both; visibility:hidden; }
+
+
+
