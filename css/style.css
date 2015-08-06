@@ -14,7 +14,7 @@ h1, h2, h3, .QAmt, #filtering-nav,
 
 p   { padding-bottom: 17px; /* same as leading = linebreak */ }
 h3  { padding-bottom: 15px; /* same as leading = linebreak */ }
-a img, img  { padding-bottom:3px; padding-top:3px; }
+a img, img  { padding-bottom:3px; padding-top:3px; padding-right: 10px; -webkit-transition: .2s all;}
 .everything     {  }
 
 
@@ -22,6 +22,7 @@ a img, img  { padding-bottom:3px; padding-top:3px; }
 a           { text-decoration:none; focus:none; }
 a:hover     { text-decoration:none; focus:none; }
 a img, img  { border:none; focus:none; }
+a img:hover { -webkit-filter: brightness(50%);}
 a:focus, img:focus  { outline: none; }
 
 p a { text-decoration: underline; }
