@@ -1,3 +1,6 @@
+
+
+
 /* masonry init */
   
     $(function(){
@@ -37,7 +40,6 @@
             break;
           }
         }
-
       });
 
       $('#filtering-nav a').click(function(){

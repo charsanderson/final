@@ -7,16 +7,13 @@ body    { overflow-y: scroll; }
 
 
 /**** typography ****/
-body,
-
-h1, h2, h3, .QAmt, #filtering-nav, 
+body, h1, h2, h3, #filtering-nav 
 
 
 p   { padding-bottom: 17px; /* same as leading = linebreak */ }
 h3  { padding-bottom: 15px; /* same as leading = linebreak */ }
 a img, img  { padding-bottom:3px; padding-top:3px; padding-right: 10px; -webkit-transition: .2s all;}
 .everything     {  }
-
 
 /**** link styles ****/
 a           { text-decoration:none; focus:none; }
@@ -37,9 +34,7 @@ a:hover { color:#89724F; }
 body            { 
 
     background:#F0EBE6; 
-    color:#493E2C; 
-    font-family: ‘Lato’, sans-serif;
-    font-weight: 300;     
+    color:#493E2C;  
 }
 
 
@@ -58,10 +53,10 @@ li{
 
 
 **** filtering menu ****
-#filtering-nav              { margin: 0px 0px 29px 0px; }
+#filtering-nav              { margin: 0px 0px 10px 0px; }
 #filtering-nav li           { float:left; list-style:none; }
-#filtering-nav li a         { display:block; width:auto; }
-#filtering-nav li a:active  { text-decoration:none; }
+#filtering-nav li a         { display:block; width:auto;}
+#filtering-nav li a:active  { text-decoration:none;}
 #filtering-nav li a.selected, #filtering-nav li a.selected.everything   { text-decoration:none; }
 
 
