@@ -1,8 +1,4 @@
-
-
 /* queryloader min */
-
-
 var QueryLoader = {
     overlay: "",
     loadBar: "",
@@ -16,6 +12,8 @@ var QueryLoader = {
 
     
     init: function() {
+
+
         if (navigator.userAgent.match(/MSIE (\d+(?:\.\d+)+(?:b\d*)?)/) == "MSIE 6.0,6.0") {
             return false
         }
@@ -43,7 +41,6 @@ var QueryLoader = {
     },
     imgCallback: function() {
         QueryLoader.doneNow++;
-        QueryLoader.animateLoader()
     },
     getImages: function(a) {
         var b = $(a).find("*:not(script)").each(function() {
@@ -64,93 +61,7 @@ var QueryLoader = {
             }
         })
     },
-    createPreloading: function() {
-        QueryLoader.preloader = $("<div></div>").appendTo(QueryLoader.selectorPreload);
-        $(QueryLoader.preloader).css({
-            height: "0px",
-            width: "0px",
-            overflow: "hidden"
-        });
-        var b = QueryLoader.items.length;
-        QueryLoader.doneStatus = b;
-        for (var a = 0; a < b; a++) {
-            var c = $("<img></img>");
-            $(c).attr("src", QueryLoader.items[a]);
-            $(c).unbind("load");
-            $(c).bind("load", function() {
-                QueryLoader.imgCallback()
-            });
-            $(c).appendTo($(QueryLoader.preloader))
-        }
-    },
-    spawnLoader: function() {
-        if (QueryLoader.selectorPreload == "body") {
-            var b = $(window).height();
-            var c = $(window).width();
-            var a = "fixed"
-        } else {
-            var b = $(QueryLoader.selectorPreload).outerHeight();
-            var c = $(QueryLoader.selectorPreload).outerWidth();
-            var a = "absolute"
-        }
-        var e = $(QueryLoader.selectorPreload).offset()["left"];
-        var d = $(QueryLoader.selectorPreload).offset()["top"];
-        QueryLoader.overlay = $("<div></div>").appendTo($(QueryLoader.selectorPreload));
-        $(QueryLoader.overlay).addClass("QOverlay");
-        $(QueryLoader.overlay).css({
-            position: a,
-            top: d,
-            left: e,
-            width: c + "px",
-            height: b + "px"
-        });
-        QueryLoader.loadBar = $("<div></div>").appendTo($(QueryLoader.overlay));
-        $(QueryLoader.loadBar).addClass("QLoader");
-        $(QueryLoader.loadBar).css({
-            position: "relative",
-            top: "50%",
-            width: "0%"
-        });
-        QueryLoader.loadAmt = $("<div>0%</div>").appendTo($(QueryLoader.overlay));
-        $(QueryLoader.loadAmt).addClass("QAmt");
-        $(QueryLoader.loadAmt).css({
-            position: "relative",
-            top: "50%",
-            left: "50%"
-        })
-    },
-    animateLoader: function() {
-        var a = (100 / QueryLoader.doneStatus) * QueryLoader.doneNow;
-        if (a > 99) {
-            $(QueryLoader.loadAmt).html("100%");
-            $(QueryLoader.loadBar).stop().animate({
-                width: a + "%"
-            }, 500, "linear", function() {
-                QueryLoader.doneLoad()
-            })
-        } else {
-            $(QueryLoader.loadBar).stop().animate({
-                width: a + "%"
-            }, 500, "linear", function() {});
-            $(QueryLoader.loadAmt).html(Math.floor(a) + "%")
-        }
-    },
-    doneLoad: function() {
-        clearTimeout(QueryLoader.ieTimeout);
-        if (QueryLoader.selectorPreload == "body") {
-            var a = $(window).height()
-        } else {
-            var a = $(QueryLoader.selectorPreload).outerHeight()
-        }
-        $(QueryLoader.loadAmt).hide();
-        $(QueryLoader.loadBar).animate({
-            height: a + "px",
-            top: 0
-        }, 100, "linear", function() {
-            $(QueryLoader.overlay).fadeOut(100);
-            $(QueryLoader.preloader).remove()
-        })
-    }
+    
 };
 
 
@@ -294,3 +205,5 @@ var QueryLoader = {
         animationOptions: {}
     }
 })(jQuery);
+
+
