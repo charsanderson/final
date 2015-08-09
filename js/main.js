@@ -9,7 +9,6 @@ var QueryLoader = {
     doneStatus: 0,
     doneNow: 0,
     selectorPreload: "body",
-    ieLoadFixTime: 2000,
     ieTimeout: "",
 
     
@@ -28,17 +27,9 @@ var QueryLoader = {
                 QueryLoader.createPreloading()
             })
         }
-        QueryLoader.ieTimeout = setTimeout("QueryLoader.ieLoadFix()", QueryLoader.ieLoadFixTime)
     },
 
-    ieLoadFix: function() {
-        var a = navigator.userAgent.match(/MSIE (\d+(?:\.\d+)+(?:b\d*)?)/);
-        if (a[0].match("MSIE")) {
-            while ((100 / QueryLoader.doneStatus) * QueryLoader.doneNow < 100) {
-                QueryLoader.imgCallback()
-            }
-        }
-    },
+    
     imgCallback: function() {
         QueryLoader.doneNow++;
     },
@@ -205,11 +196,6 @@ var QueryLoader = {
         animationOptions: {}
     }
 })(jQuery);
-
-$('#nav-icon3').click(function(){
-        console.log('woo!');
-        $(this).toggleClass('open');
-    });
 
 
 

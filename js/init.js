@@ -26,7 +26,7 @@
           var possibleFilterClass = window.location.hash.replace('#', '');
           switch (possibleFilterClass) {
           // if the hash matches the following words
-          case 'editorial' : case 'paint' : case 'prod' : case 'books' : case 'comics' : case 'animation' : case 'things' : case 'info' : 
+          case 'editorial' : case 'paint' : case 'prod' : case 'drawings': case 'info' : 
             // set masonry options animate to false
             masonryOptions.animate = false;
             // hide boxes that don't match the filter class
@@ -75,9 +75,6 @@
     });
 
 
-
-
-
 /* document ready */
 
 $(document).ready(function() {       
@@ -87,6 +84,25 @@ $(document).ready(function() {
       position: "relative",
       top: "20px",
       left: "25px"
+});
+
+});   
+
+$(document).ready(function(){
+  $('#nav-icon3').click(function(){
+    $(this).toggleClass('open');
+    $('.mobile-nav').slideToggle(); //if it's hidden show it and if its shown hide it .toggle >>slideToggle adds the animation
+
   });
 
-});     
+  $( window).resize(function(){
+      console.log('screen is resizing');
+      //detect window width
+      console.log($(window).width());
+
+      
+      if ($( window ).width() >= 760){
+        $('.mobile-nav').hide(); 
+      }
+    });
+});  
