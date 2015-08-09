@@ -70,9 +70,6 @@ a:hover {
 a img, img  { 
     border:none; focus:none; 
 }
-a img:hover {
- -webkit-filter: brightness(50%);
-}
 
 a:focus, img:focus  {
  outline: none; 
@@ -210,6 +207,16 @@ header h2{
 .wall:after, #filtering-nav:after { content:''; display:block; height:0; clear:both; visibility:hidden; }
 
 /****Display {Title} on Hover**/
+
+a img:hover {
+ /*-webkit-filter: brightness(50%);*/
+    filter: brightness(50%);
+    -webkit-filter: brightness(50%);
+    -moz-filter: brightness(50%);
+    -o-filter: brightness(50%);
+    -ms-filter: brightness(50%);
+}
+
 span.text-content  {
     display:none;
 }
