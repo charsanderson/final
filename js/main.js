@@ -1,3 +1,5 @@
+
+
 /* queryloader min */
 var QueryLoader = {
     overlay: "",
@@ -18,9 +20,7 @@ var QueryLoader = {
             return false
         }
         if (QueryLoader.selectorPreload == "body") {
-            QueryLoader.spawnLoader();
             QueryLoader.getImages(QueryLoader.selectorPreload);
-            QueryLoader.createPreloading()
         } else {
             $(document).ready(function() {
                 QueryLoader.spawnLoader();
@@ -205,5 +205,11 @@ var QueryLoader = {
         animationOptions: {}
     }
 })(jQuery);
+
+$('#nav-icon3').click(function(){
+        console.log('woo!');
+        $(this).toggleClass('open');
+    });
+
 
 
