@@ -26,7 +26,7 @@
           var possibleFilterClass = window.location.hash.replace('#', '');
           switch (possibleFilterClass) {
           // if the hash matches the following words
-          case 'editorial' : case 'paint' : case 'prod' : case 'drawings': case 'info' : 
+          case 'editorial' : case 'design' : case 'prod' : case 'drawings': case 'info' : 
             // set masonry options animate to false
             masonryOptions.animate = false;
             // hide boxes that don't match the filter class
