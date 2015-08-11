@@ -91,6 +91,14 @@ a img:hover {
     -ms-filter: brightness(50%);
 }
 
+header > ul.social{
+    filter: brightness(70%);
+    -webkit-filter: brightness(70%);
+    -moz-filter: brightness(70%);
+    -o-filter: brightness(70%);
+    -ms-filter: brightness(70%);
+}
+
 a:focus, img:focus  {
  outline: none; 
 }
@@ -107,7 +115,7 @@ p a:hover {
 
 /**** colours ****/
 a { 
-    color:#493E2C; 
+    color:#222; 
 }
 
 a:hover {
@@ -115,13 +123,17 @@ a:hover {
 }
 
 body{ 
-    background:#FCFAFF; 
-    color:#493E2C; 
+    background:#EAEAEA; 
+    color:#222; 
 }
 
 
 li{
     list-style: none;
+}
+
+header{
+    background: #EAEAEA;
 }
 
 
@@ -135,10 +147,8 @@ li{
 
 header {
     width: 100%; 
-    height: 15%;
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
     position:fixed;
-    background: #FCFAFF;
     top: 0;
     z-index: 1;
 
@@ -170,7 +180,6 @@ header h2{
 #filtering-nav { 
     padding-right: 15px; 
     padding-top: 8px;
-    background-color: #FCFAFF;
 
 }
 
@@ -256,9 +265,28 @@ span.text-content  {
 
 /***MEDIA QUERY ***/
 
+@media (max-width: 1280px){
+
+    .wall{
+      margin-top: 200px;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease; 
+    }
+
+}
 
 
 @media (max-width: 800px){
+
+    .wall{
+      margin-top: 140px;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease; 
+    }
   
     .social{
       display: none;
@@ -270,7 +298,7 @@ span.text-content  {
 
     div#mobile{
         height: 30%;
-        background: #FCFAFF;
+        background: #EAEAEA;
     }
 
     #mobile > #filtering-nav{
@@ -278,6 +306,7 @@ span.text-content  {
       padding: -60px 0px 0px 0px;
       font-size: .85em;
       width: 100%;
+      background: #EAEAEA;
     }
 
     #mobile li{
