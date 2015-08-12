@@ -108,8 +108,11 @@ $(document).ready(function(){
       console.log($(window).width());
 
       
-      if ($( window ).width() >= 760){
+      if ($( window ).width() >= 1100){
+        $('#nav-icon3').removeClass('open')
         $('.mobile-nav').hide(); 
+        $('.wall').removeClass('bump');  
+        $('.wall').css('margin-top', '140px');  
       }
     });
 
