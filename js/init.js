@@ -92,7 +92,14 @@ $(document).ready(function(){
   $('#nav-icon3').click(function(){
     $(this).toggleClass('open');
     $('.mobile-nav').slideToggle(); //if it's hidden show it and if its shown hide it .toggle >>slideToggle adds the animation
-
+    if ($('#nav-icon3').hasClass('open')) {
+        console.log ('HALLO');     
+        $('.wall').css('margin-top', '200px');  
+        $('.wall').addClass('bump'); 
+     } else {
+        $('.wall').removeClass('bump');  
+        $('.wall').css('margin-top', '140px');  
+      }
   });
 
   $( window).resize(function(){
@@ -105,4 +112,6 @@ $(document).ready(function(){
         $('.mobile-nav').hide(); 
       }
     });
+
+
 });  
