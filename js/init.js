@@ -98,7 +98,7 @@ $(document).ready(function(){
         $('.wall').addClass('bump'); 
      } else {
         $('.wall').removeClass('bump');  
-        $('.wall').css('margin-top', '140px');  
+        $('.wall').css('margin-top', '180px');  
       }
   });
 
@@ -112,7 +112,7 @@ $(document).ready(function(){
         $('#nav-icon3').removeClass('open')
         $('.mobile-nav').hide(); 
         $('.wall').removeClass('bump');  
-        $('.wall').css('margin-top', '140px');  
+        $('.wall').css('margin-top', '180px');  
       }
     });
 
